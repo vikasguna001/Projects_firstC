@@ -1,0 +1,22 @@
+1. create react project 
+    -> npx create-react-app app_name
+
+2. create Node project
+    -> npm i 
+    -> npm init -y 
+    -> npx express-generator -e
+    -> npm i nodemon
+    -> change file
+        -> package.json
+        - "start": "nodemon ./bin/www"
+
+3. install concurrently
+    -> npm i
+    -> npm i concurrently
+    -> change file
+        -> package.json
+        -  "scripts": {
+                "frontend": "cd frontend  && npm start",
+                "backend": "cd backend && npm start",
+                "start": "concurrently \"npm run frontend\" \"npm run backend\""
+            },
